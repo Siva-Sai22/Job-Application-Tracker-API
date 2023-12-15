@@ -2,6 +2,14 @@
 
 This is a simple job application tracker built with Node.js and Express. It uses SQLite for data storage.
 
+## Features
+
+This job application tracker includes the following features:
+- **Company Management**: You can create and retrieve all companies. Each company is identified by a unique ID and has a name.
+- **Job Management**: You can create, retrieve, update, and delete jobs. Each job has a title, associated company ID, status, and deadline.
+- **API Endpoints**: The application provides RESTful API endpoints for managing companies and jobs.
+- **Data Storage**: The application uses SQLite for data storage, providing a lightweight disk-based database that doesn't require a separate server process.
+
 ## Installation
 
 1. Clone this repository: `git clone https://github.com/yourusername/job-application-tracker.git`
