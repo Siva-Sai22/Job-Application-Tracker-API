@@ -23,4 +23,27 @@ router.post('/jobs', (req, res) => {
   });
 });
 
+router.put('/jobs/:id', (req, res) => {
+  const { id } = req.params;
+  const job = req.body;
+
+  Job.updateJob(id, job, (err) => {
+    if (err) {
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+    res.json({ message: 'Job updated successfully' });
+  });
+});
+
+router.delete('/jobs/:id', (req, res) => {
+  const { id } = req.params;
+
+  Job.deleteJob(id, (err) => {
+    if (err) {
+      return res.status(500).json({ error: 'Internal Server Error' });
+    }
+    res.json({ message: 'Job deleted successfully' });
+  });
+});
+
 module.exports = router;
